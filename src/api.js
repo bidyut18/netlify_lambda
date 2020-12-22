@@ -10,6 +10,11 @@ router.get('/', (req, res) => {
         'msg': "Hello lambda"
     })
 })
+router.get('/test', (req, res) => {
+    res.send({
+        'msg': "Hello test"
+    })
+})
 
 app.use('/.netlify/functions/api', router)
 
